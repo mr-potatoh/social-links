@@ -1,0 +1,121 @@
+:root{
+    --bg-color:hsl(0, 0%, 8%);
+    --card-color: hsl(0, 0%, 12%);
+    --grey-color: hsl(0, 0%, 20%);
+    --text-color: hsl(0, 0%, 100%);
+    --accent-color: hsl(204, 50%, 71%);
+    --text2-color: hsl(0, 0%, 70%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+    background-color: var(--card-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    width: clamp(30px, 90vw, 280px);
+    border: hsl(0, 0%, 7%) solid 1px;
+    border-radius: 20px;
+    box-shadow: 9px 12px 0px 0px hsl(0, 0%, 7%);
+    padding: 20px;
+    gap: 20px;
+}
+
+.hobbys{
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--text2-color);
+}
+
+.location{
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'inter', sans-serif;
+}
+
+.links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.links li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: var(--grey-color);
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 500;
+
+}
+
+.links li a:hover{
+    color: var(--bg-color);
+    background-color: var(--accent-color);
+    transition: all 0.3s ease-in-out;
+}
+.links li{
+    width: 100%;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: fit-content;
+        height: fit-content;
+        margin: 20px;
+    }
+}
+
